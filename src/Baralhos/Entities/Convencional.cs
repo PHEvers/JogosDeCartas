@@ -15,6 +15,10 @@ namespace Baralhos.Entities
         public List<int> Monte { get; set; }
         public List<int> Lixeira{ get; set; }
         public List<int> EmJogo { get; set; }
+        //
+        private Random random = new Random();
+        private List<int> temporaria;
+        //
 
         public void Inicio()
         {
@@ -37,5 +41,24 @@ namespace Baralhos.Entities
 
             Console.WriteLine("Baralho criado");
         }
+        public void Sorteia()
+        {
+            
+            for (int i = 0; i > TotalMonte; i++)
+            {
+                temporaria[i] = Monte[random.Next(TotalMonte-i)];
+            }
+            for (int i = 0; i > TotalMonte; i++)
+            {
+                Monte[i] = temporaria[i];
+            }
+            Console.WriteLine("Monte embaralhado");
+            for (int i = 0; i > TotalMonte; i++)
+            {
+                Console.WriteLine("Sua carta é: " + Monte[i]);
+            }
+            return;
+        }
     }
 }
+

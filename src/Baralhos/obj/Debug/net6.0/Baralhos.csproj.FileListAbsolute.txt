@@ -1,0 +1,12 @@
+C:\C#\JogosDeCartas\src\Baralhos\bin\Debug\net6.0\Baralhos.deps.json
+C:\C#\JogosDeCartas\src\Baralhos\bin\Debug\net6.0\Baralhos.dll
+C:\C#\JogosDeCartas\src\Baralhos\bin\Debug\net6.0\Baralhos.pdb
+C:\C#\JogosDeCartas\src\Baralhos\obj\Debug\net6.0\Baralhos.csproj.AssemblyReference.cache
+C:\C#\JogosDeCartas\src\Baralhos\obj\Debug\net6.0\Baralhos.GeneratedMSBuildEditorConfig.editorconfig
+C:\C#\JogosDeCartas\src\Baralhos\obj\Debug\net6.0\Baralhos.AssemblyInfoInputs.cache
+C:\C#\JogosDeCartas\src\Baralhos\obj\Debug\net6.0\Baralhos.AssemblyInfo.cs
+C:\C#\JogosDeCartas\src\Baralhos\obj\Debug\net6.0\Baralhos.csproj.CoreCompileInputs.cache
+C:\C#\JogosDeCartas\src\Baralhos\obj\Debug\net6.0\Baralhos.dll
+C:\C#\JogosDeCartas\src\Baralhos\obj\Debug\net6.0\refint\Baralhos.dll
+C:\C#\JogosDeCartas\src\Baralhos\obj\Debug\net6.0\Baralhos.pdb
+C:\C#\JogosDeCartas\src\Baralhos\obj\Debug\net6.0\ref\Baralhos.dll
