@@ -19,26 +19,32 @@ namespace Baralhos.Entities
         private Random random = new Random();
         private List<int> temporaria;
         //
-
+        public Convencional()
+        {
+            Inicio();
+        }
         public void Inicio()
         {
             string coringa = "0";
-            do
+            /*   do
+               {
+                   Console.WriteLine("Com coringa?");
+                   Console.WriteLine("1 = S | 2 = N");
+                   coringa = Console.ReadLine();
+               } while (coringa != "1" && coringa != "2");
+   */
+            Monte = new List<int>();
+            Lixeira = new List<int>();
+            EmJogo = new List<int>();
+            for (int i = 0; i<52; i++)
             {
-                Console.WriteLine("Com coringa?");
-                Console.WriteLine("1 = S | 2 = N");
-                coringa = Console.ReadLine();
-            } while (coringa != "1" || coringa != "2");
-            for(int i = 0; i<52; i++)
-            {
-                Monte[i]= i+1;
+                Monte.Add(i+1);
             }
-            Lixeira.Clear();
-            EmJogo.Clear();
+
             TotalMonte = 52;
             TotalLixeira = 0;
             TotalEmJogo = 0;
-
+            
             Console.WriteLine("Baralho criado");
         }
         public void Sorteia()
@@ -53,12 +59,50 @@ namespace Baralhos.Entities
                 Monte[i] = temporaria[i];
             }
             Console.WriteLine("Monte embaralhado");
-            for (int i = 0; i > TotalMonte; i++)
+            for (int i = 0; i < TotalMonte; i++)
             {
                 Console.WriteLine("Sua carta é: " + Monte[i]);
             }
+            Console.WriteLine("Monte embaralhado");
             return;
         }
+        public string Leitor(int i)
+        {
+            if( (i/13) < 1)
+            {
+                if(i < 11)
+                {
+                    Console.WriteLine(i + " Espadas");
+                    return i + " Espadas";
+                }
+            }
+            if ( (i/13) < 2)
+            {
+                if ( i%13 < 11 && i % 13 > 0)
+                {
+                    Console.WriteLine(i % 13 + " Ouros");
+                    return i + " Ouros";
+                }
+            }
+            if ((i / 13) < 3)
+            {
+                if (i % 13 < 11 && i % 13 > 0)
+                {
+                    Console.WriteLine(i % 13 + " Copas");
+                    return i + " Copas";
+                }
+            }
+            if ((i / 13) < 4)
+            {
+                if (i % 13 < 11 && i % 13 > 0)
+                {
+                    Console.WriteLine(i % 13 + " Paus");
+                    return i + " Paus";
+                }
+            }
+            Console.WriteLine(i + " Vazamento");
+            return "seila";
+        } 
     }
 }
 

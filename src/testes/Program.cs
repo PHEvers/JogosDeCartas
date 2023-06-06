@@ -4,7 +4,12 @@ using Baralhos.Entities;
 Console.WriteLine("Hello, World!");
 
 Convencional deck = new Convencional();
-deck.Sorteia();
+foreach (var item in deck.Monte)
+{
+    deck.Leitor(item);
+}
+
+//deck.Sorteia();
 /*foreach(int carta in deck.Monte)
 {
     Console.WriteLine("Sua carta é: " + carta + "\n");
