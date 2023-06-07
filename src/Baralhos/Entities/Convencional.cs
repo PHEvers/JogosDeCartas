@@ -55,6 +55,7 @@ namespace Baralhos.Entities
             {
                 temporaria.Add(card);
             }
+            Monte.Clear();
             do
             {
                 i = random.Next(temporaria.Count);
