@@ -36,6 +36,7 @@ namespace Baralhos.Entities
             Monte = new List<int>();
             Lixeira = new List<int>();
             EmJogo = new List<int>();
+            temporaria = new List<int>();
             for (int i = 0; i<52; i++)
             {
                 Monte.Add(i+1);
@@ -49,26 +50,21 @@ namespace Baralhos.Entities
         }
         public void Sorteia()
         {
-            
-            for (int i = 0; i > TotalMonte; i++)
+            int i = 0;
+            foreach( int card in Monte)
             {
-                temporaria[i] = Monte[random.Next(TotalMonte-i)];
+                temporaria.Add(card);
             }
-            for (int i = 0; i > TotalMonte; i++)
+            do
             {
-                Monte[i] = temporaria[i];
-            }
-            Console.WriteLine("Monte embaralhado");
-            for (int i = 0; i < TotalMonte; i++)
-            {
-                Console.WriteLine("Sua carta é: " + Monte[i]);
-            }
-            Console.WriteLine("Monte embaralhado");
-            return;
+                i = random.Next(temporaria.Count);
+                Monte.Add(temporaria[i]);
+                temporaria.RemoveAt(i);
+            } while (temporaria.Count != 0);
         }
         public string Leitor(int i)
         {
-            if( (i/14) < 1)
+            if((i/14) < 1)
             {
                 if (i == 1)
                 {
@@ -96,7 +92,7 @@ namespace Baralhos.Entities
                     return "Rei Espadas";
                 }
             }
-            if ( (i/14) < 2)
+            if((i/14) < 2)
             {
                 if (i == 14)
                 {
@@ -123,9 +119,8 @@ namespace Baralhos.Entities
                     Console.WriteLine("Rei Ouros");
                     return "Rei Ouros";
                 }
-
             }
-            if ((i / 14) < 3)
+            if((i/14) < 3)
             {
                 if (i == 27)
                 {
@@ -153,7 +148,7 @@ namespace Baralhos.Entities
                     return "Rei Copas";
                 }
             }
-            if ((i / 14) < 4)
+            if((i/14) < 4)
             {
                 if (i == 40)
                 {
@@ -183,7 +178,7 @@ namespace Baralhos.Entities
             }
 
             Console.WriteLine(i + " Vazamento");
-            return "seila";
+            return "Vazamento";
         } 
     }
 }

@@ -8,7 +8,13 @@ foreach (var item in deck.Monte)
 {
     deck.Leitor(item);
 }
-
+Console.WriteLine("-----------Sorteando---------------");
+deck.Sorteia();
+Console.WriteLine("-----------Sorteando FIM-----------");
+foreach (var item in deck.Monte)
+{
+    deck.Leitor(item);
+}
 //deck.Sorteia();
 /*foreach(int carta in deck.Monte)
 {
