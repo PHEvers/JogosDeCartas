@@ -181,6 +181,10 @@ namespace Baralhos.Entities
             Console.WriteLine(i + " Vazamento");
             return "Vazamento";
         } 
+        public int Retira(int Quantidade)
+        {
+
+        }
     }
 }
 
