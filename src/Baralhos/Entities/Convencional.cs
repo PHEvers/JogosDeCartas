@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,6 @@ namespace Baralhos.Entities
         public int TotalEmJogo { get; set; }
         public List<int> Monte { get; set; }
         public List<int> Lixeira{ get; set; }
-        public List<int> EmJogo { get; set; }
         //
         private Random random = new Random();
         private List<int> temporaria;
@@ -181,9 +181,19 @@ namespace Baralhos.Entities
             Console.WriteLine(i + " Vazamento");
             return "Vazamento";
         } 
-        public int Retira(int Quantidade)
+        public int Retira()
         {
-
+            int i = Monte[0];
+            Monte.Remove(0);
+            return i;
+        }
+        public void Mostra(int i)
+        {
+            for(int j = 0; i < j; j++)
+            {
+                Console.WriteLine("sua carta é: " + Monte[j]);
+            }
+            return;
         }
     }
 }
