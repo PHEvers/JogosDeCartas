@@ -4,4 +4,8 @@ using Baralhos.Entities;
 Console.WriteLine("Hello, World!");
 
 Convencional deck = new Convencional();
-deck.Sorteia();
+deck.Embaralha();
+for (int i = 0; i < deck.Monte.Count; i++)
+{
+    deck.Mostra(i);
+}
