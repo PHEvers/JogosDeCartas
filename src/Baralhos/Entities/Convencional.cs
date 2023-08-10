@@ -85,6 +85,22 @@ namespace Baralhos.Entities
         {
             Console.WriteLine(Monte[i].Numercao + " " + Monte[i].Naipe);
         }
+        public Carta Retira(int i)
+        {
+            Carta carta = Monte[i];
+            Monte.RemoveAt(i);
+            return carta;
+        }
+        public void Retorna(Carta carta)
+        {
+            Monte.Add(carta);
+            return;
+        }
+        public void JogarLixeira(Carta carta)
+        {
+            Lixeira.Add(carta);
+            return;
+        }
     }
 }
 

@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "Baralhos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Baralhos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Baralhos.dll": {}
+        }
+      },
+      "testes/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Baralhos": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/testes.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/testes.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Baralhos/1.0.0": {
+      "type": "project",
+      "path": "../Baralhos/Baralhos.csproj",
+      "msbuildProject": "../Baralhos/Baralhos.csproj"
+    },
+    "testes/1.0.0": {
+      "type": "project",
+      "path": "../testes/testes.csproj",
+      "msbuildProject": "../testes/testes.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "Baralhos >= 1.0.0",
+      "testes >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\pedro.evers_escoladu\\.nuget\\packages\\": {},
@@ -39,7 +77,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\C#\\JogosDeCartas\\src\\Baralhos\\Baralhos.csproj": {
+              "projectPath": "C:\\C#\\JogosDeCartas\\src\\Baralhos\\Baralhos.csproj"
+            },
+            "C:\\C#\\JogosDeCartas\\src\\testes\\testes.csproj": {
+              "projectPath": "C:\\C#\\JogosDeCartas\\src\\testes\\testes.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
