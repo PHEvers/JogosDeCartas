@@ -81,9 +81,9 @@ namespace Baralhos.Entities
             Console.WriteLine("Baralho embaralhado");
             return;
         }
-        public void Mostra(int i)
+        public void MostraCarta(int i)
         {
-            Console.WriteLine(Monte[i].Numercao + " " + Monte[i].Naipe);
+            Monte[i].Mostra();
         }
         public Carta Retira(int i)
         {

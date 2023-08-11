@@ -11,17 +11,23 @@ namespace Jogos.Entities.VinteUm
     {
         public int Id { get; set; }
         public List<Jogadores21> Jogadores { get; set; }
+        public List<Jogadores21> JogadoresEliminados { get; set; }
+        public Jogadores21 Mesa { get; set; }
         public Convencional Baralho { get; set; }
 
         public Partida21() 
         {
+            Mesa = new Jogadores21();
             Jogadores = new List<Jogadores21>();
+            
             Baralho = new Convencional();
             Baralho.Embaralha();
+            
             CadastrarJogadores();
 
+            Inicio();
+            MostraMesa();
 
-            //cadastra os jogadores
         }
         public void CadastrarJogadores()
         {
@@ -43,6 +49,25 @@ namespace Jogos.Entities.VinteUm
                     Pontuacao = 0,
                 });
                 i--;
+            }
+        }
+        public void Inicio()
+        {
+            Mesa.Mao.Add(Baralho.Retira(0));
+            Mesa.Mao.Add(Baralho.Retira(0));
+
+            for (int i = 0; i < Jogadores.Count; i++)
+            {
+                Jogadores[i].Mao.Add(Baralho.Retira(0));
+                Jogadores[i].Mao.Add(Baralho.Retira(0));
+            }
+        }
+        public void MostraMesa()
+        {
+            Mesa.MostraMao();
+            for(int i = 0; i < Jogadores.Count; i++)
+            {
+                Jogadores[i].MostraMao();
             }
         }
     }

@@ -8,8 +8,14 @@ namespace Baralhos.Entities
 {
     public class Carta
     {
-        public int Id;
-        public string Naipe;
-        public int Numercao;
+        public int Id { get; set; }
+        public string Naipe { get; set; }
+        public int Numercao { get; set; }
+
+        public void Mostra()
+        {
+            Console.WriteLine(Numercao + " " + Naipe);
+        }
+        
     }
 }

@@ -13,5 +13,17 @@ namespace Jogos.Entities.VinteUm
         public string Nome { get; set; }
         public List<Carta> Mao{ get; set; }
         public int Pontuacao { get; set; }
+
+        public int MostraMao()
+        {
+            Console.WriteLine("Jogador: " + Nome);
+            Pontuacao = 0;
+            for(int i = 0; i < Mao.Count; i++)
+            {
+                Pontuacao = Pontuacao + Mao[i].Numercao;
+                Mao[i].Mostra();
+            }
+            return Pontuacao;
+        }
     }
 }
