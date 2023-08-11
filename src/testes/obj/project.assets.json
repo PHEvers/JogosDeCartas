@@ -11,6 +11,19 @@
         "runtime": {
           "bin/placeholder/Baralhos.dll": {}
         }
+      },
+      "Jogos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Baralhos": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Jogos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Jogos.dll": {}
+        }
       }
     }
   },
@@ -19,11 +32,17 @@
       "type": "project",
       "path": "../Baralhos/Baralhos.csproj",
       "msbuildProject": "../Baralhos/Baralhos.csproj"
+    },
+    "Jogos/1.0.0": {
+      "type": "project",
+      "path": "../Jogos/Jogos.csproj",
+      "msbuildProject": "../Jogos/Jogos.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Baralhos >= 1.0.0"
+      "Baralhos >= 1.0.0",
+      "Jogos >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -61,6 +80,9 @@
           "projectReferences": {
             "C:\\C#\\JogosDeCartas\\src\\Baralhos\\Baralhos.csproj": {
               "projectPath": "C:\\C#\\JogosDeCartas\\src\\Baralhos\\Baralhos.csproj"
+            },
+            "C:\\C#\\JogosDeCartas\\src\\Jogos\\Jogos.csproj": {
+              "projectPath": "C:\\C#\\JogosDeCartas\\src\\Jogos\\Jogos.csproj"
             }
           }
         }

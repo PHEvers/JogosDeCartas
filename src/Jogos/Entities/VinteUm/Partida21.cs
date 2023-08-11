@@ -15,7 +15,35 @@ namespace Jogos.Entities.VinteUm
 
         public Partida21() 
         {
+            Jogadores = new List<Jogadores21>();
+            Baralho = new Convencional();
+            Baralho.Embaralha();
+            CadastrarJogadores();
+
+
             //cadastra os jogadores
+        }
+        public void CadastrarJogadores()
+        {
+            int i = 0;
+            do
+            {
+                Console.WriteLine("Quantos jogagores? (Max: 4)");
+                i = Convert.ToInt32(Console.ReadLine());
+            } while (i <= 0 || i > 4);
+
+            while (i > 0)
+            {
+                Console.WriteLine("Qual o nome do jogador " + (Jogadores.Count+1) + "?");
+                Jogadores.Add(new Jogadores21
+                {
+                    Id = Jogadores.Count + 1,
+                    Nome = Console.ReadLine(),
+                    Mao = new List<Carta>(),
+                    Pontuacao = 0,
+                });
+                i--;
+            }
         }
     }
 }

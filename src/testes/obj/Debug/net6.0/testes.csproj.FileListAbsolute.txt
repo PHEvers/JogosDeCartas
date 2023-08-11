@@ -16,3 +16,5 @@ C:\C#\JogosDeCartas\src\testes\obj\Debug\net6.0\ref\testes.dll
 C:\C#\JogosDeCartas\src\testes\bin\Debug\net6.0\Baralhos.dll
 C:\C#\JogosDeCartas\src\testes\bin\Debug\net6.0\Baralhos.pdb
 C:\C#\JogosDeCartas\src\testes\obj\Debug\net6.0\testes.csproj.CopyComplete
+C:\C#\JogosDeCartas\src\testes\bin\Debug\net6.0\Jogos.dll
+C:\C#\JogosDeCartas\src\testes\bin\Debug\net6.0\Jogos.pdb

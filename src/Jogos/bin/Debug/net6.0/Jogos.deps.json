@@ -6,20 +6,6 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "testes/1.0.0": {
-        "dependencies": {
-          "Baralhos": "1.0.0",
-          "Jogos": "1.0.0"
-        },
-        "runtime": {
-          "testes.dll": {}
-        }
-      },
-      "Baralhos/1.0.0": {
-        "runtime": {
-          "Baralhos.dll": {}
-        }
-      },
       "Jogos/1.0.0": {
         "dependencies": {
           "Baralhos": "1.0.0"
@@ -27,21 +13,21 @@
         "runtime": {
           "Jogos.dll": {}
         }
+      },
+      "Baralhos/1.0.0": {
+        "runtime": {
+          "Baralhos.dll": {}
+        }
       }
     }
   },
   "libraries": {
-    "testes/1.0.0": {
+    "Jogos/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "Baralhos/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Jogos/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
